@@ -15,8 +15,9 @@
                     @endif
 
                     Your About Page
-                        @foreach ($users as $user)
-                            <p>This is user {{ $user->name . ' ID:' . $user->id }}</p>
+                        @foreach ($posts as $post)
+                            <h1> {{ $post->title }} </h1>
+                            <p>  {{ $post->body }} </p>
                         @endforeach
                 </div>
             </div>
