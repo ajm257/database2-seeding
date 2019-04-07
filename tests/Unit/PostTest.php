@@ -20,10 +20,11 @@ class PostTest extends TestCase
         $this->assertInternalType('string', $post->title);
     }
 
-    public function testUserCount()
+    public function testPostCount()
     {
         $posts = Post::All();
-        $postcount = $posts->count();
-        $this->assertCount($postcount>=500, ['foo']);
+        $postCount = $posts->count();
+        $this->assertCount($postCount>=500, ['foo']);
     }
+
 }
