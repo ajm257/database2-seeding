@@ -18,7 +18,14 @@ class UserTest extends TestCase
     {
         $user = User::InRandomOrder()->first();
         $this->assertInternalType('int', $user->id);
-        $this->assertInstanceOf('App\User',$user);
+        $this->assertInstanceOf('App\User', $user);
     }
 
+    public function testExpectUserActualUser()
+    {
+        $user = User::find(1);
+        $this->expectOutputString($user);
+        print $user;
+
+    }
 }
