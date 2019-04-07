@@ -24,6 +24,6 @@ class PostTest extends TestCase
     {
         $posts = Post::All();
         $postcount = $posts->count();
-        $this->assertInternalType('int', $postcount);
+        $this->assertCount($postcount>=500, ['foo']);
     }
 }
